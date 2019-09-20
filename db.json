@@ -1,0 +1,168 @@
+{
+  "Users": [
+    {
+      "email": "bondesvick@gmail.com",
+      "UserName": "bondesvick",
+      "PassWord": "12345",
+      "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "UserName": "admin",
+      "PassWord": "admin",
+      "id": 2
+    },
+    {
+      "email": "bondesvick@gmail.com",
+      "UserName": "user1",
+      "PassWord": "12345",
+      "id": 3
+    }
+  ],
+  "Designs": [
+    {
+      "designName": "Mini Pant",
+      "category": "Trouser",
+      "Gender": "For Men",
+      "Designer": "James Cagilary",
+      "Description": " popularly worn by young to mid age girls and women. This type of skirt suits well for a toned body figure. The skirt has a body fitting stitch which is the important feature for girls to buy. Miniskirts are a definitely a casual party wear skirt. The material used in designing the skirt comes in various designs and pattern.",
+      "image": "Images/imageService.jpg",
+      "id": 44
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Sneaker",
+      "Gender": "For Men",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/AJ6900_006_P4.jpg",
+      "id": 45
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Heels",
+      "Gender": "For Women",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/2603962_461472.jpg",
+      "id": 46
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Suit",
+      "Gender": "For Pets",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/Small Pet Dogs Sweater Cat Winter Warm Sweater Knit Coats Outwear Apparel Small Dogs Clothes Costume Pets Cloth Clothing alCGCS7JSC_1-500x500_0.jpg",
+      "id": 47
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Skirt",
+      "Gender": "For Women",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/9c537f58a82a87b4f02904f0c44396d4.jpg",
+      "id": 48
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Heels",
+      "Gender": "For Women",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/0020654_ladies-strappy-heel-db57-gold_460.jpeg",
+      "id": 49
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Jacket",
+      "Gender": "Unisex",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/xanax-tshirt-black.jpg",
+      "id": 50
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Skirt",
+      "Gender": "For Women",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/61zDMruClqL._UX679_.jpg",
+      "id": 51
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Shirt",
+      "Gender": "For Pets",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/elk-navy-blue-bandana-for-small-medium-dog.jpg",
+      "id": 52
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Shoe",
+      "Gender": "For Men",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/04600840_zi_black_black.jpg",
+      "id": 53
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Glasses",
+      "Gender": "Unisex",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/download (5).jpg",
+      "id": 54
+    },
+    {
+      "designName": " Mermaid",
+      "category": "T-shirt",
+      "Gender": "For Men",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/tshirt-palm-4_1024x1024.jpg",
+      "id": 55
+    },
+    {
+      "designName": "Ebube Gown",
+      "category": "Gown",
+      "Gender": "For Women",
+      "Designer": "By: By: By: By: By: By: Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop t",
+      "image": "Images/download (1).jpg",
+      "id": 56
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Sneaker",
+      "Gender": "Unisex",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/394637_410_ss_01.jpg",
+      "id": 57
+    },
+    {
+      "designName": " Mermaid",
+      "category": "Trouser",
+      "Gender": "For Women",
+      "Designer": "Mason Jonas",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
+      "image": "Images/images (2).jpg",
+      "id": 58
+    },
+    {
+      "designName": "Ebube Dog",
+      "category": "T-shirt",
+      "Gender": "For Pets",
+      "Designer": "Akah Ebube",
+      "Description": "A Dog bought for Ebube . A Dog bought for Ebube .A Dog bought for Ebube .A Dog bought for Ebube .A Dog bought for Ebube .A Dog bought for Ebube .A Dog bought for Ebube .A Dog bought for Ebube .A Dog bought for Ebube .A Dog bought for Ebube .",
+      "image": "Images/Small Pet Dogs Sweater Cat Winter Warm Sweater Knit Coats Outwear Apparel Small Dogs Clothes Costume Pets Cloth Clothing alCGCS7JSC_1-500x500_0.jpg",
+      "id": 60
+    }
+  ]
+}

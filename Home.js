@@ -13,9 +13,9 @@ $(document).ready(function (){
         success: function (designs) {
             //console.log('success', designs);
             $.each(designs, function (i, design) {
-                console.log(design.image);
-                $display.append(
-                    '<div class="col s12 m6 l6">' +
+                //console.log(design.image);
+                $display.prepend(
+                    '<div class="col s12 m6 l4">' +
                     '<div class="card hoverable">' +
                         
                         '<div class="card-image"><img style="height: 255px; width: 100%;" src="' + design.image + '"></div>' +
@@ -31,14 +31,14 @@ $(document).ready(function (){
                             
                         '</div>' +
                         '<div class="card-action">'+
-                            '<a href="#more"class="btn teal modal-trigger">More Details</a>'+
+                            '<button href="#more" id ="more" class="btn teal modal-trigger">More Details</button>'+
                             '<div class="modal" id="more">'+
                                 '<div class="modal=content">'+
                                     '<h4>Description</h4>'+
                                     '<p>' + design.Description +'< /p>'+
                                 '</div>'+
                                 '<div class="modal-footer">'+
-                                '<a hfreh="#" class="btn modal-closs teal">Close</a>'+
+                                '<a href="#" class="btn modal-closs teal">Close</a>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
@@ -49,5 +49,12 @@ $(document).ready(function (){
         }
     })
 
-    $('.modal').modal();
+    $display.delegate('#more', 'click', function(){
+        var $dsgnDisplay = $(this).closest('div');
+        console.log($dsgnDisplay.find('div.modal')[0]);
+        //$dsgnDisplay.find('div.modal').modal();
+        
+    });
+
+    //$('.modal').modal();
 });

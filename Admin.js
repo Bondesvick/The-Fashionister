@@ -12,7 +12,7 @@ $(document).ready(function (){
 
     // The formated template to be appended
     function addDesign(design){
-        $display.append(
+        $display.prepend(
             '<div class="card-panel hoverable teal">' +
 
                 '<h4 id="designName" class="white-text center designName">' + design.designName + '</h4>' +

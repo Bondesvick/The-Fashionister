@@ -31,14 +31,14 @@ $(document).ready(function (){
                             
                         '</div>' +
                         '<div class="card-action">'+
-                            '<button href="#more" id ="more" class="btn teal modal-trigger">More Details</button>'+
+                            '<button id="more" class="btn teal modal-trigger">More Details</button>'+
                             '<div class="modal" id="more">'+
-                                '<div class="modal=content">'+
+                                '<div class="modal-content">'+
                                     '<h4>Description</h4>'+
                                     '<p>' + design.Description +'< /p>'+
                                 '</div>'+
                                 '<div class="modal-footer">'+
-                                '<a href="#" class="btn modal-closs teal">Close</a>'+
+                                '<a href="#" class="btn modal-close teal">Close</a>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
@@ -49,12 +49,13 @@ $(document).ready(function (){
         }
     })
 
-    $display.delegate('#more', 'click', function(){
-        var $dsgnDisplay = $(this).closest('div');
-        console.log($dsgnDisplay.find('div.modal')[0]);
-        //$dsgnDisplay.find('div.modal').modal();
+    // $display.delegate('#more', 'click', function(){
+    //     var $dsgnDisplay = $(this).closest('div');
+    //     console.log($dsgnDisplay.find('div.modal')[0]);
+    //     $dsgnDisplay.find('div.modal').modal();
         
-    });
+        
+    // });
 
-    //$('.modal').modal();
+    $('.modal').modal();
 });

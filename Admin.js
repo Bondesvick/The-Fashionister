@@ -15,25 +15,25 @@ $(document).ready(function (){
         $display.prepend(
             '<div class="card-panel hoverable teal">' +
 
-                '<h4 id="designName" class="white-text center designName">' + design.designName + '</h4>' +
+                '<h4 id="designName" class="white-text center designName noedit">' + design.designName + '</h4>' +
                 '<div class="input-field">' +
                     '<input type="text" id="edit-dsgnName" class="edit-dsgnName white-text designName edit"/>' +
                     '<label for="edit-dsgnName" class="white-text edit">Edit Design Name</label>' +
                 '</div>'+
 
-                '<h5 class="white-text dsgnCategory">' + design.category +'</h5>' +
+                '<h5 class="white-text dsgnCategory noedit">' + design.category + '</h5>' +
                 '<div class="input-field">'+
                     '<input type="text" id="edit-dsgnCategory" class="edit-dsgnName white-text dsgnCategory edit"/>' +
                     '<label for="edit-dsgnCategory" class="white-text edit">Edit Design Category</label>' +
                 '</div>'+
 
-                '<h5 class="white-text genderCategory">' + design.Gender + '</h5>' +
+                '<h5 class="white-text genderCategory noedit">' + design.Gender + '</h5>' +
                 '<div class="input-field">' +
                     '<input type="text" id="edit-genderCategory" class="edit-dsgnName white-text genderCategory edit"/>' +
                     '<label for="edit-genderCategory" class="white-text edit">Edit Design Category</label>' +
                 '</div>' +
                 
-                '<h5 class="white-text designerName">' + 'By: ' + design.Designer + '</h5>' +
+                '<h5 class="white-text designerName noedit">' + 'By: ' + design.Designer + '</h5>' +
                 '<div class="input-field">' +
                     '<input type="text" id="edit-dsgnerName" class="edit-dsgnName white-text designerName edit"/>' +
                     '<label for="edit-dsgnerName" class="white-text edit">Edit Designer Name</label>' +
@@ -41,15 +41,15 @@ $(document).ready(function (){
                 //image
                 '<input type="file" id="image2" class="edit image2" accept="image/*" name="image2"/>' +
 
-                '<p class="white-text descrbTxt">' + design.Description.substring(0, 200) + '</p>' +
+                '<p class="white-text descrbTxt noedit">' + design.Description.substring(0, 200) + '</p>' +
                 '<div class="input-field">'+
                         '<textarea id="edit-description" class="materialize-textarea white-text descrbTxt edit"></textarea>' +
                         '<label for="edit-description" class="white-text edit">Description</label>'+
                     '</div>'+
 
                 '<div>' +
-                    '<button id="'+ design.id +'" class="btn waves-effect waves-dark loaded-btn editBtn">Edit</button>' +
-                    '<button data-id="'+ design.id + '" class="btn waves-effect waves-dark delBtn">Delete</button>' +
+                    '<button id="' + design.id + '" class="btn waves-effect waves-dark loaded-btn editBtn noedit">Edit</button>' +
+                    '<button data-id="' + design.id + '" class="btn waves-effect waves-dark delBtn noedit">Delete</button>' +
                     '<button data-id="' + design.id + '" class="btn waves-effect waves-dark saveBtn edit">Save</button>' +
                     '<button data-id="' + design.id + '" class="btn waves-effect waves-dark cancelBtn edit">Cancel</button>' +
                 '</div>' +
@@ -136,47 +136,50 @@ $(document).ready(function (){
         $cardDiv.find('input.designName').val( $cardDiv.find('h4.designName').html() );
         $cardDiv.find('input.dsgnCategory').val( $cardDiv.find('h5.dsgnCategory').html());
         $cardDiv.find('input.genderCategory').val($cardDiv.find('h5.genderCategory').html());
-        $cardDiv.find('input.designerName').val($cardDiv.find('h5.designerName').html());
+        $cardDiv.find('input.designerName').val($cardDiv.find('h5.designerName').html()
+        .substring(4, $cardDiv.find('h5.designerName').html().length-1));
         $cardDiv.find('textarea.descrbTxt').val($cardDiv.find('p.descrbTxt').html())
 
-        $cardDiv.find('input.designName').removeClass('edit');
-        $cardDiv.find('input.dsgnCategory').removeClass('edit');
-        $cardDiv.find('input.genderCategory').removeClass('edit');
-        $cardDiv.find('input.designerName').removeClass('edit');
-        $cardDiv.find('textarea.descrbTxt').removeClass('edit');
-        $cardDiv.find('button.saveBtn').removeClass('edit');
-        $cardDiv.find('button.cancelBtn').removeClass('edit');
-        $cardDiv.find('input.image2').removeClass('edit');
+        $cardDiv.addClass('edit');
+    //     $cardDiv.find('input.designName').removeClass('edit');
+    //     $cardDiv.find('input.dsgnCategory').removeClass('edit');
+    //     $cardDiv.find('input.genderCategory').removeClass('edit');
+    //     $cardDiv.find('input.designerName').removeClass('edit');
+    //     $cardDiv.find('textarea.descrbTxt').removeClass('edit');
+    //     $cardDiv.find('button.saveBtn').removeClass('edit');
+    //     $cardDiv.find('button.cancelBtn').removeClass('edit');
+    //     $cardDiv.find('input.image2').removeClass('edit');
 
-        $cardDiv.find('h4.designName').addClass('edit');
-        $cardDiv.find('h5.dsgnCategory').addClass('edit');
-        $cardDiv.find('h5.genderCategory').addClass('edit');
-        $cardDiv.find('h5.designerName').addClass('edit');
-        $cardDiv.find('p.descrbTxt').addClass('edit');
-        $cardDiv.find('button.editBtn').addClass('edit');
-        $cardDiv.find('button.delBtn').addClass('edit');
-        //$cardDiv.addClass('edit');
+    //     $cardDiv.find('h4.designName').addClass('edit');
+    //     $cardDiv.find('h5.dsgnCategory').addClass('edit');
+    //     $cardDiv.find('h5.genderCategory').addClass('edit');
+    //     $cardDiv.find('h5.designerName').addClass('edit');
+    //     $cardDiv.find('p.descrbTxt').addClass('edit');
+    //     $cardDiv.find('button.editBtn').addClass('edit');
+    //     $cardDiv.find('button.delBtn').addClass('edit');
+    //     //$cardDiv.addClass('edit');
     })
 
     $display.delegate('.cancelBtn', 'click', function(){
         var $cardDiv = $(this).closest('div').parent();
 
-        $cardDiv.find('input.designName').addClass('edit');
-        $cardDiv.find('input.dsgnCategory').addClass('edit');
-        $cardDiv.find('input.genderCategory').addClass('edit');
-        $cardDiv.find('input.designerName').addClass('edit');
-        $cardDiv.find('textarea.descrbTxt').addClass('edit');
-        $cardDiv.find('button.saveBtn').addClass('edit');
-        $cardDiv.find('button.cancelBtn').addClass('edit');
-        $cardDiv.find('input.image2').addClass('edit');
+        $cardDiv.removeClass('edit');
+    //     $cardDiv.find('input.designName').addClass('edit');
+    //     $cardDiv.find('input.dsgnCategory').addClass('edit');
+    //     $cardDiv.find('input.genderCategory').addClass('edit');
+    //     $cardDiv.find('input.designerName').addClass('edit');
+    //     $cardDiv.find('textarea.descrbTxt').addClass('edit');
+    //     $cardDiv.find('button.saveBtn').addClass('edit');
+    //     $cardDiv.find('button.cancelBtn').addClass('edit');
+    //     $cardDiv.find('input.image2').addClass('edit');
 
-        $cardDiv.find('h4.designName').removeClass('edit');
-        $cardDiv.find('h5.dsgnCategory').removeClass('edit');
-        $cardDiv.find('h5.genderCategory').removeClass('edit');
-        $cardDiv.find('h5.designerName').removeClass('edit');
-        $cardDiv.find('p.descrbTxt').removeClass('edit');
-        $cardDiv.find('button.editBtn').removeClass('edit');
-        $cardDiv.find('button.delBtn').removeClass('edit');
+    //     $cardDiv.find('h4.designName').removeClass('edit');
+    //     $cardDiv.find('h5.dsgnCategory').removeClass('edit');
+    //     $cardDiv.find('h5.genderCategory').removeClass('edit');
+    //     $cardDiv.find('h5.designerName').removeClass('edit');
+    //     $cardDiv.find('p.descrbTxt').removeClass('edit');
+    //     $cardDiv.find('button.editBtn').removeClass('edit');
+    //     $cardDiv.find('button.delBtn').removeClass('edit');
     })
 
 
@@ -214,4 +217,5 @@ $(document).ready(function (){
 
     $('select').formSelect();
     //$('.edit-categories').formSelect();
+    // $('.modal').modal();
 });

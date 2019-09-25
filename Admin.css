@@ -9,14 +9,14 @@
 .edit{
     display: none;
 }
-
-/* div.edit .edit{
+/*
+div.edit .edit{
     display: initial;
+}
+div.edit .noedit {
+    display: none;
 } */
 
-.noedit{
-    display: none;
-}
 
 #image3{
     color: teal;

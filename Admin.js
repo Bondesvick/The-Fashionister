@@ -13,9 +13,15 @@ $(document).ready(function (){
     // The formated template to be appended
     function addDesign(design){
         $display.prepend(
-            '<div class="card-panel hoverable teal">' +
+        '<div class="card-panel hoverable teal">' +
+            '<ul class="collapsible">'+
+            '<li>'+
+            '<div class="collapsible-header teal">'+
+                '<h4 class="white-text center">' + design.designName + '</h4>' +
+            '</div>'+
 
-                '<h4 id="designName" class="white-text center designName noedit">' + design.designName + '</h4>' +
+            '<div class="collapsible-body">' +
+                '<h4 id="designName" class=" white-text designName noedit">' + design.designName + '</h4>' +
                 '<div class="input-field">' +
                     '<input type="text" id="edit-dsgnName" class="edit-dsgnName white-text designName edit"/>' +
                     '<label for="edit-dsgnName" class="white-text edit">Edit Design Name</label>' +
@@ -41,7 +47,7 @@ $(document).ready(function (){
                 //image
                 '<input type="file" id="image2" class="edit image2" accept="image/*" name="image2"/>' +
 
-                '<p class="white-text descrbTxt noedit">' + design.Description.substring(0, 200) + '</p>' +
+                '<p class="white-text descrbTxt noedit">' + design.Description + '</p>' +
                 '<div class="input-field">'+
                         '<textarea id="edit-description" class="materialize-textarea white-text descrbTxt edit"></textarea>' +
                         '<label for="edit-description" class="white-text edit">Description</label>'+
@@ -50,10 +56,14 @@ $(document).ready(function (){
                 '<div>' +
                     '<button id="' + design.id + '" class="btn waves-effect waves-dark loaded-btn editBtn noedit">Edit</button>' +
                     '<button data-id="' + design.id + '" class="btn waves-effect waves-dark delBtn noedit">Delete</button>' +
-                    '<button data-id="' + design.id + '" class="btn waves-effect waves-dark saveBtn edit">Save</button>' +
+                    '<a href="#update1" data-id="' + design.id + '" class="btn waves-effect waves-dark saveBtn edit modal-trigger">Save Updates</a>' +
                     '<button data-id="' + design.id + '" class="btn waves-effect waves-dark cancelBtn edit">Cancel</button>' +
                 '</div>' +
-            '</div>'
+
+            '</div>' +
+            '</li>'+
+            '</ul>'+
+        '</div>'
         ); //append ends
     };
 
@@ -65,6 +75,7 @@ $(document).ready(function (){
             //console.log('success', designs);
             $.each(designs, function(i, design){
                 addDesign(design);
+                $('.collapsible').collapsible();
             });
         },// success ends
         error: function(){
@@ -79,20 +90,20 @@ $(document).ready(function (){
     var $designGender = $('#dsgn-gender');
     var $designer = $('#designer');
     var $designDescription = $('#description');
-    var $imh1Btn = $('#image3');
+    var $imh1Btn = $('.file-path');
 
     $('#add-btn').on('click', function(){
-
+        let $success = true;
         var design ={
             designName: $designName.val(),
             category: $designCategories.val(),
             Gender: $designGender.val(),
             Designer: $designer.val(),
             Description: $designDescription.val(),
-            image: 'Images/' + $imh1Btn.val().substring(12, $imh1Btn.val().length)
+            image: 'Images/' + $imh1Btn.val()  //.substring(12, $imh1Btn.val().length)
         };
 
-        // console.log($designName.val());
+         //console.log($imh1Btn.val());
         // console.log($designCategories.val());
         // console.log($designGender.val());
 
@@ -101,20 +112,27 @@ $(document).ready(function (){
             url: DESIGN_URI,
             data: design,
             success: function(newDesign){
+                // $('.modal').modal();
                 addDesign(newDesign);
+                $success = true;
             },
             error: function(){
                 alert('error saving design!');
+                $success = false;
             }
         });
+
+        if($success == true){
+            $('.modal').modal();
+        }
     });
 
 
     // deleting designs
     $display.delegate('.delBtn','click', function () {
 
-        var $cardDiv = $(this).closest('div').parent();
-        console.log($cardDiv);
+        var $cardDiv = $(this).closest('div.card-panel'); //.parent();
+        console.log($cardDiv[0]);
         
         $.ajax({
             type: 'DELETE',
@@ -146,7 +164,7 @@ $(document).ready(function (){
         $cardDiv.find('input.genderCategory').removeClass('edit');
         $cardDiv.find('input.designerName').removeClass('edit');
         $cardDiv.find('textarea.descrbTxt').removeClass('edit');
-        $cardDiv.find('button.saveBtn').removeClass('edit');
+        $cardDiv.find('a.saveBtn').removeClass('edit');
         $cardDiv.find('button.cancelBtn').removeClass('edit');
         $cardDiv.find('input.image2').removeClass('edit');
 
@@ -169,7 +187,7 @@ $(document).ready(function (){
         $cardDiv.find('input.genderCategory').addClass('edit');
         $cardDiv.find('input.designerName').addClass('edit');
         $cardDiv.find('textarea.descrbTxt').addClass('edit');
-        $cardDiv.find('button.saveBtn').addClass('edit');
+        $cardDiv.find('a.saveBtn').addClass('edit');
         $cardDiv.find('button.cancelBtn').addClass('edit');
         $cardDiv.find('input.image2').addClass('edit');
 
@@ -186,6 +204,7 @@ $(document).ready(function (){
     $display.delegate('.saveBtn', 'click', function () {
         var $cardDiv = $(this).closest('div').parent();
         var $imagePath = $cardDiv.find('input.image2').val();
+        var $success = true;
         var editedDesign = {
             designName: $cardDiv.find('input.designName').val(),
             category: $cardDiv.find('input.dsgnCategory').val(),
@@ -199,23 +218,32 @@ $(document).ready(function (){
         
         
 
-            $.ajax({
-                type: 'PUT',
-                url: DESIGN_URI + $(this).attr('data-id'),
-                data: editedDesign,
-                success: function (designs) {
-                    //console.log('success', designs);
-                    // $.each(designs, function (i, design) {
-                    //     addDesign(design);
-                    // });
-                }, // success ends
-                error: function () {
-                    alert('error updating design');
-                }
-            });
+        $.ajax({
+            type: 'PUT',
+            url: DESIGN_URI + $(this).attr('data-id'),
+            data: editedDesign,
+            success: function (designs) {
+                $success = true;
+                //console.log('success', designs);
+                // $.each(designs, function (i, design) {
+                //     addDesign(design);
+               // });
+            }, // success ends
+            error: function () {
+                $success = false;
+            alert('error updating design');
+            }
+        });
+        if ($success == true){
+            $('.modal').modal();
+        }
     })
 
     $('select').formSelect();
+    $('textarea#description').characterCounter();
+    $('.datepicker').datepicker();
     //$('.edit-categories').formSelect();
     // $('.modal').modal();
 });
+
+//M.AutoInit();

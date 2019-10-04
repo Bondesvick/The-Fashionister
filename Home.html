@@ -7,33 +7,87 @@
     <title>The Fashionister</title>
     <link rel="stylesheet" href="materialize-v1.0.0/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="Home.css">
+    <link href="iconfont/material-icons.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="Home.html" class="brand-logo" title="Refresh"><span class="teal-text">The
-                </span><span>Fashionister</span>
-            </a>
-                
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <div class="input-field">
-                        <input class="white-text search" id="search" type="text">
-                        <label class="white-text" for="search">Search Designs</label>
-                    </div>
-                    
-                </li>
-                <li><a href="LogIn.html">Log In</a></li>
-                
-                <li><a href="About.html">About</a></li>
-            </ul>
+    <!-- <div class="card toptop slider">
+        <ul class="slides">
 
-        </div>
-    </nav>
+        </ul>
+    </div> -->
+    <div class="navbar-fixed">
+        <nav class="" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="Home.html" class="brand-logo tooltipped" data-tooltip="Refresh"><span class="teal-text">The
+                    </span><span>Fashionister</span>
+                </a>
+                <!--Sidenav Trigger-->
+                <a href="" class="sidenav-trigger" data-target="mobile-menu"><i class="material-icons">menu</i></a>
 
+                <!--DESKTOP nav-->
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <div class="input-field">
+                            <input class="white-text search" id="search" type="text">
+                            <label class="white-text" for="search">Search Designs</label>
+                        </div>
+                    </li>
+                    <li><a href="LogIn.html">Log In</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-target="dropdown1">Action</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div style="display: none" id="top1" class="section scrollspy"></div>
+    <!--dropdown content-->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Item here</a></li>
+        <li><a href="#!">Item here</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!">Item here</a></li>
+        <li><a href="#!">Item here</a></li>
+    </ul>
+
+    <!--MOBILE nav-->
+    <ul class="sidenav gray lighten-2" id="mobile-menu">
+        <li><div class="user-view">
+            <div class="background">
+                <img src="../The Fashionister/Images/14+-+7.jpg">
+            </div>
+            <a href="#!"><img class="circle" src="../The Fashionister/Images/Survey_Shoes_600x.jpg"></a>
+            <a href="#!"><span>Bondesvick</span></a>
+            <a href="#!"><span>Bondesvick@gmail.com</span></a>
+        </div></li>
+        <li><a class="waves-effect" href="LogIn.html">
+            <span>Log In</span>
+            <i class="material-icons left">account_circle</i>
+        </a></li>
+        <li><a class="waves-effect" href="About.html">
+            <span>About</span>
+            <i class="material-icons left">description</i>
+        </a></li>
+        <li class="divider"></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a class="subheader">subheader</a></li>
+        <li><a class="waves-effect">A Link With Waves</a></li>
+    </ul>
+
+    <!--Floating Button-->
+    <!-- <a id="scale-demo" href="#!" class="btn-floating btn-large scale-transition scale-in scale-out pulse fixed"></a> -->
+    <div class="fixed-action-btn">
+        <a href="#top" class="btn-floating btn-large teal waves-effect pulse"><i class="material-icons">add</i></a>
+        <ul>
+            <li><a class="btn-floating red">+</a></li>
+            <li><a class="btn-floating yellow">@</a></li>
+            <li class="tooltipped" data-tooltip="About"><a href="About.html" class="btn-floating green"><i class="material-icons">description</i></a></li>
+            <li class="tooltipped" data-tooltip="Log In"><a href="LogIn.html" class="btn-floating blue"><i class="material-icons">account_circle</i></a></li>
+        </ul>
+    </div>
+    
 
     
-    <div class="container">
+    <div class="container-fluid">
         <div class="row designs">
 
 

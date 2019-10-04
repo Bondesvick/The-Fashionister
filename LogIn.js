@@ -12,7 +12,7 @@ $(document).ready(function () {
                         url: LOGIN_DATABASE_URI,
                         success: function (users) {
                             //console.log('success', designs);
-                            $.each(users, function (i, user) {
+                            $.each(users, function(i, user) {
                                 if (user.UserName == userName && user.PassWord == userPwd) {
                                     window.location = "Admin.html";
                                     return;

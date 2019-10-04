@@ -9,18 +9,19 @@
     <link rel="stylesheet" href="Admin.css">
 </head>
 <body>
-
-    <nav class="" role="navigation">
-        <div class="nav-wrapper container">
-            <a title="Home" id="logo-container" href="Home.html" class="brand-logo"><span class="teal-text">The
-                </span><span>Fashionister</span></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="LogIn.html">Log Out</a></li>
-                <li><a href="SignUp.html">Create User</a></li>
-                <li><a href="About.html">About</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+            <nav class="" role="navigation">
+                <div class="nav-wrapper container">
+                    <a title="Home" id="logo-container" href="Home.html" class="brand-logo"><span class="teal-text">The
+                        </span><span>Fashionister</span></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="LogIn.html">Log Out</a></li>
+                        <li><a href="SignUp.html">Create User</a></li>
+                        <li><a href="About.html">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -87,38 +88,58 @@
                         <input name="Designer" id="designer" type="text" required>
                         <label for="designer">Designer Name</label>
                     </div>
-
-                    <div class="input-field">
-                        <small>you should only select from images saved on the "Images" folder of this project</small>
-                        <input name="image3" accept="image/*" id="image3" type="file">
+                    <!--IMAGE-->
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>Image</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                        <small class="red-text">you should only select from images saved on the "Images" folder of this project</small>
                     </div>
                     <!-- <button class="btn" id="uploadBtn">Upload</button> -->
+                    <!--DATE-->
+                    <div class="input-field">
+                        <input type="text" id="datePicker" class="datepicker">
+                        <label for="datePicker">Select Date</label>
+                    </div>
+                    
 
                     <div class="input-field">
-                        <textarea id="description" class="materialize-textarea"></textarea>
+                        <textarea id="description" class="materialize-textarea" data-length="200"></textarea>
                         <label for="description">Description</label>
                     </div>
                     <div class="btn-div">
-                        <button id="add-btn" class="reg-add btn waves-effect waves-light">Add new Design</button>
-                        
+                        <a href="#add1" id="add-btn" class="reg-add btn waves-effect waves-light modal-trigger">Add new Design</a>
                     </div>
 
                     <!--MODAL-->
-                    <!-- <button id="more" class="btn teal modal-trigger">More Details</button>
-                    <div class="modal" id="more">
+                    <!-- <a href="#more1" id="more" class="btn teal modal-trigger">More Details</a>-->
+                    <div class="modal" id="add1">
                         <div class="modal-content">
-                            <h4>Description</h4>
-                            <p>A test for modal, no nonesense this time</p>
+                            <h4>Success!</h4>
+                            <p>Design has been added successfully!</p>
                         </div>
                         <div class="modal-footer">
-                            <a href="#" class="btn modal-close teal">Close</a>
+                            <a href="#!" class="btn modal-close teal">Close</a>
                         </div>
-                    </div> -->
+                    </div>
+                    <!--Update Modal-->
+                    <div class="modal" id="update1">
+                        <div class="modal-content">
+                            <h4>Success!</h4>
+                            <p>Design has been updated successfully!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="btn modal-close teal">Close</a>
+                        </div>
+                    </div>
 
                 
             </div>
         </div>
-
     </div>
 
 

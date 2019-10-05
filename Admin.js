@@ -216,8 +216,6 @@ $(document).ready(function (){
         console.log($cardDiv.find('input.dsgnCategory').val());
         console.log('Images/' + $imagePath.substring(12, $imagePath.length));
         
-        
-
         $.ajax({
             type: 'PUT',
             url: DESIGN_URI + $(this).attr('data-id'),

@@ -1,6 +1,9 @@
 const DESIGN_URI = "http://localhost:4000/Designs/";
 
 $(document).ready(function (){
+    const user = JSON.parse(window.localStorage.getItem('user'));
+    console.log(user)
+    console.log(user.id);
     var $imh1Btn = $('#image3');
     $('#uploadBtn').on('click', function(){
         console.log($imh1Btn.val().substring(12, $imh1Btn.val().length));

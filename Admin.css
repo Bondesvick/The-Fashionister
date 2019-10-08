@@ -20,5 +20,8 @@ div.edit .noedit {
 
 #image3{
     color: teal;
-    
+}
+
+.design-list{
+    overflow-y: auto;
 }

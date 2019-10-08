@@ -13,51 +13,64 @@ $(document).ready(function (){
     function tempFormat(design){
         $display.prepend(
             '<div class="col s12 m4 l3">' +
-                '<div class="card large z-depth-1 hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' + design.Gender + '">' +
-                    '<div class="card-image waves-effect waves-block waves-light"><img style="height: 255px; width: 100%;" src="' + design.image + '"></div>' +
+                '<div class="card large hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' +           design.Gender + '">' +
+                    '<div class="card-image waves-effect waves-block waves-light"><img class="responsive-img activator" src="' + design.image + '"></div>' +
                         '<div class="card-content">' +
-                        '<span class="center teal-text card-title">' + design.designName + '</span>' +
-                            '<p class="">' + design.category + '</p>' +
-                            '<p class="">' + design.Gender + '</p>' +
-                            '<p class="">' + 'By: ' + design.Designer + '</p>' +
-                            '<p class="truncate">' + design.Description + '</p>' +
+                        '<span class="center teal-text text-darken-4 card-title activator">' + design.designName + '</span>' +
+                        '<p class="truncate">' + design.Description + '</p>' +
                         '</div>' +
+                        
                     '<div class="card-action">' +
                         '<a href="#modal'+ design.id+'" id="more" class="btn waves-effect waves-light teal modal-trigger">More Details</a>' +
                         //MODAL
-                        '<div class=" modal modal-fixed-footer" id="modal' + design.id + '">' +
-                            '<div class="modal-content">' +
-                                '<h5>' + design.designName + '</h5>' +
+                        '<div class="modal" id="modal' + design.id + '">' +
+                        '<div class="col l3">'+
+                        '<img class="responsive-img" src="' + design.image + '">' +
+                        '<img class="responsive-img" src="' + design.image + '">' +
+                        '<img class="responsive-img" src="' + design.image + '">' +
+                        '</div>'+
+                            '<div class="modal-content col l9">' +
+                                '<h1 class="teal-text">' + design.designName + '</h1>' +
+                                '<blockquote>'+
                                 '<h6>Designed by: ' + design.Designer +'</h6>' +
                                 '<h6>Designed for: ' + design.Gender + '</h6>' +
                                 '<h6>Design Category: ' + design.category + '</h6>' +
-                                '<h4>Design Description</h4>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
-                                '<p>' + design.Description + '</p>' +
+                                '</blockquote>' +
+                                '<h4>Design Description:</h4>' +
+                                '<p class="flow-text">' + design.Description  + 
+                                    '</br>' +
+                                    '</br>' +
+                                    design.Description +
+                                    '</br>'+
+                                     design.Description +
+                                     '</br>' +
+                                     design.Description +
+                                     '</br>' +
+                                     design.Description +
+                                     '</br>' +
+                                     design.Description +
+                                '</p>' +
                             '</div>' +
                             '<div class="modal-footer">' +
                                 '<a href="#!" class="btn waves-effect waves-light modal-close teal">Close</a>' +
                             '</div>' +
                         '</div>' +
+                    '</div>' + //card action ends
+                    //CAR REVEAL
+                    '<div class="card-reveal">' +
+                        '<span class="teal-text card-title">' + design.designName + '<i class="material-icons right">close</i></span>' +
+                        '<blockquote>' +
+                        design.category +
+                        '</br>' +
+                        design.Gender +
+                        '</br>' +
+                        'By: ' + design.Designer +
+                        '</blockquote>' +
+                        '<p>' + design.Description.substring(0, 150) + "..." + '</p>' +
+                        '<div class="card-action">' +
+                        '<a class="card-title" href="#!">Close</a>' +
+                        '<a href="#modal' + design.id + '" id="more" class="teal-text modal-trigger">More Details</a>' +
+                        '</div>'+
                     '</div>' +
                 '</div>' +
             '</div>'
@@ -121,8 +134,18 @@ $(document).ready(function (){
     //$('.modal').modal();
     $('.sidenav').sidenav();
     $('.tooltipped').tooltip();
-    $('.fixed-action-btn').floatingActionButton();
+    $('.fixed-action-btn').floatingActionButton({
+        hoverEnabled: false
+    });
     $('.dropdown-trigger').dropdown({coverTrigger: false, hover: true});
     $('.scrollspy').scrollSpy();
+    // $('.autocomplete').autocomplete({
+    //     data: {
+    //         "Heels": null,
+    //         "Skirt": null,
+    //         "Suit": null,
+
+    //     }
+    // })
     // $('.slider').slider();
 });

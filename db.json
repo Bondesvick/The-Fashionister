@@ -17,9 +17,6 @@
       "UserName": "user1",
       "PassWord": "12345",
       "id": 3
-    },
-    {
-      "id": 4
     }
   ],
   "Designs": [
@@ -310,15 +307,6 @@
       "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
       "image": "Images/elk-navy-blue-bandana-for-small-medium-dog.jpg",
       "id": 80
-    },
-    {
-      "designName": " Mermaid",
-      "category": "Shirt",
-      "Gender": "For Women",
-      "Designer": "James Cagilary",
-      "Description": "popularly worn by young to mid age girls and women. This type of skirt suits well for a toned body figure. The skirt has a body fitting stitch which is the important",
-      "image": "Images/9c537f58a82a87b4f02904f0c44396d4.jpg",
-      "id": 81
     }
   ]
 }

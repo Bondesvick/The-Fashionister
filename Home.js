@@ -13,8 +13,8 @@ $(document).ready(function (){
     function tempFormat(design){
         $display.prepend(
             '<div class="col s12 m4 l3">' +
-                '<div class="card large hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' +           design.Gender + '">' +
-                    '<div class="card-image waves-effect waves-block waves-light"><img class="responsive-img activator" src="' + design.image + '"></div>' +
+                '<div class="card large hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' + design.Gender + '">' +
+                    '<div class="card-image waves-effect waves-block waves-light"><img class=" activator" src="' + design.image + '"></div>' +
                         '<div class="card-content">' +
                         '<span class="center teal-text text-darken-4 card-title activator">' + design.designName + '</span>' +
                         '<p class="truncate">' + design.Description + '</p>' +

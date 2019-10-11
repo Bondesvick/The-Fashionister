@@ -8,13 +8,15 @@ $(document).ready(function (){
 //    })
     var $display = $('.designs');
     //var $slides = $('.slides');
+    var $carousel = $('.carousel');
     
     //--front end HTML template Formating
     function tempFormat(design){
         $display.prepend(
             '<div class="col s12 m4 l3">' +
                 '<div class="card large hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' + design.Gender + '">' +
-                    '<div class="card-image waves-effect waves-block waves-light"><img class=" activator" src="' + design.image + '"></div>' +
+                    '<div class="card-image waves-effect waves-block waves-light"><img class=" activator" src="' + design.image + '">'+
+                    '</div>' +
                         '<div class="card-content">' +
                         '<span class="center teal-text text-darken-4 card-title activator">' + design.designName + '</span>' +
                         '<p class="truncate">' + design.Description + '</p>' +
@@ -24,10 +26,10 @@ $(document).ready(function (){
                         '<a href="#modal'+ design.id+'" id="more" class="btn waves-effect waves-light teal modal-trigger">More Details</a>' +
                         //MODAL
                         '<div class="modal" id="modal' + design.id + '">' +
-                        '<div class="col l3">'+
-                        '<img class="responsive-img" src="' + design.image + '">' +
-                        '<img class="responsive-img" src="' + design.image + '">' +
-                        '<img class="responsive-img" src="' + design.image + '">' +
+                        '<div class="col l3 m12 s12">'+
+                        '<img class="responsive-img materialboxed" src="' + design.image + '">' +
+                        '<img class="responsive-img materialboxed" src="' + design.image + '">' +
+                        '<img class="responsive-img materialboxed" src="' + design.image + '">' +
                         '</div>'+
                             '<div class="modal-content col l9">' +
                                 '<h1 class="teal-text">' + design.designName + '</h1>' +
@@ -81,11 +83,17 @@ $(document).ready(function (){
     // function slides(dsgnSlides){
     //     $slides.prepend(
     //         '<li>'+
-    //             '<img src="'+dsgnSlides.image+'">' +
+    //             '<img class="" src="' + dsgnSlides.image + '">' +
     //         '</li>'
     //     );
     // }
+    function carousel(carousels){
+        $carousel.append(
+            '<a class="carousel-item" href="#' + carousels.id + '!"> <img class="" src="' + carousels.image + '"></a>'
+        )
+    }
 
+    let $slideNum = 9
     $.ajax({
         type: 'GET',
         url: DESIGN_URI,
@@ -94,13 +102,23 @@ $(document).ready(function (){
             $.each(designs, function (i, design) {
                 //console.log(design.image);
                 tempFormat(design);
-                //slides(design);
+                if($slideNum > 0){
+                     //slides(design);
+                     carousel(design);
+                      $slideNum--;
+                }
+                $('.carousel').carousel();
+                //  $('.carousel.carousel-slider').carousel({
+                //      fullWidth: false,
+                //      indicators: true
+                //  })
                 //$('.slider').slider();
                 $('.tooltipped').tooltip();
                 $('.materialboxed').materialbox();
             });
         }
     })
+    
 
     //----search command event function----
     $('#search').keyup(function(){
@@ -113,6 +131,7 @@ $(document).ready(function (){
             url: DESIGN_URI,
             success: function (designs) {
                 $.each(designs, function (i, design) {
+                    $('.materialboxed').materialbox();
                     if (design.designName.search(expression) != -1 ||
                      design.category.search(expression) != -1 || 
                      design.Gender.search(expression) != -1) {
@@ -131,6 +150,7 @@ $(document).ready(function (){
      // $(this).modal();
      $('.modal').modal();
     });
+
     //$('.modal').modal();
     $('.sidenav').sidenav();
     $('.tooltipped').tooltip();
@@ -147,5 +167,9 @@ $(document).ready(function (){
 
     //     }
     // })
-    // $('.slider').slider();
+    //$('.slider').slider();
+    //$('.carousel').carousel()
+    // $('.carousel.carousel-slider').carousel({
+    //     fullWidth: true
+    // })
 });

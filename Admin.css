@@ -9,6 +9,9 @@
 .edit{
     display: none;
 }
+/* div .edit {
+    display: none;
+} */
 /*
 div.edit .edit{
     display: initial;

@@ -307,6 +307,51 @@
       "Description": "popularly worn by young to mid age girls and women. This type of skirt suits well for a toned body figure. The skirt has a body fitting stitch which is the important",
       "image": "Images/vpavic_181108_3078_0056.0.jpg",
       "id": 81
+    },
+    {
+      "designName": "Mini Skirt",
+      "category": "Skirt",
+      "Gender": "For Women",
+      "Designer": "Johan Constance",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/1415779432815560742.jpg",
+      "id": 82
+    },
+    {
+      "designName": "Cagilary new man",
+      "category": "Shirt",
+      "Gender": "For Men",
+      "Designer": "James Cagilary",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/113339617_439.jpg",
+      "id": 83
+    },
+    {
+      "designName": "Cagilary new man",
+      "category": "Suit",
+      "Gender": "For Men",
+      "Designer": "Akah E",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/death_valley-wallpaper-1280x1024.jpg",
+      "id": 84
+    },
+    {
+      "designName": "Mini Pant",
+      "category": "Trouser",
+      "Gender": "For Women",
+      "Designer": "Akah Ebub",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/Copy of ati-lover-computer-wallpapers-1024x768.jpg",
+      "id": 85
+    },
+    {
+      "designName": "Cagilary new man",
+      "category": "Sneaker",
+      "Gender": "Unisex",
+      "Designer": "James Cagilary",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/1415779432815560742.jpg",
+      "id": 86
     }
   ]
 }

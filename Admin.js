@@ -5,12 +5,10 @@ $(document).ready(function (){
     console.log(user)
     console.log(user.id);
     var $imh1Btn = $('#image3');
-    $('#uploadBtn').on('click', function(){
-        console.log($imh1Btn.val().substring(12, $imh1Btn.val().length));
-        
+    $('#uploadBtn').on('click', () =>{
+        //console.log($imh1Btn.val().substring(12, $imh1Btn.val().length));
     });
     
-
     var $display = $('.dispaly-designs');
 
     // The formated template to be appended
@@ -96,7 +94,7 @@ $(document).ready(function (){
     var $imh1Btn = $('.file-path');
 
     $('#add-btn').on('click', function(){
-        let $success = true;
+        let $success = false;
         var design ={
             designName: $designName.val(),
             category: $designCategories.val(),
@@ -105,11 +103,9 @@ $(document).ready(function (){
             Description: $designDescription.val(),
             image: 'Images/' + $imh1Btn.val()  //.substring(12, $imh1Btn.val().length)
         };
-
          //console.log($imh1Btn.val());
         // console.log($designCategories.val());
         // console.log($designGender.val());
-
         $.ajax({
             type: 'POST',
             url: DESIGN_URI,
@@ -117,17 +113,24 @@ $(document).ready(function (){
             success: function(newDesign){
                 // $('.modal').modal();
                 addDesign(newDesign);
-                $success = true;
+                //$success = true;
+                $('.collapsible').collapsible();
+                M.toast({
+                    html: 'Design has been added successfully 😎'
+                });
             },
             error: function(){
-                alert('error saving design!');
-                $success = false;
+                //alert('error saving design!');
+                M.toast({
+                    html: 'error saving design ❗'
+                });
+               // $success = false;
             }
         });
 
-        if($success == true){
-            $('.modal').modal();
-        }
+        // if($success == true){
+        //     $('.modal').modal();
+        // }
     });
 
 
@@ -143,7 +146,11 @@ $(document).ready(function (){
             success: function(){
                 $cardDiv.fadeOut(300, function(){
                     $(this).remove();
-                })
+                });
+
+                M.toast({
+                    html: 'design has been dalated'
+                });
             }
         });
     });
@@ -229,15 +236,21 @@ $(document).ready(function (){
                 // $.each(designs, function (i, design) {
                 //     addDesign(design);
                // });
+               M.toast({
+                   html: 'design has been updated'
+               });
             }, // success ends
             error: function () {
-                $success = false;
-            alert('error updating design');
+                ///$success = false;
+            // alert('error updating design');
+            M.toast({
+                html: 'error updating design'
+            });
             }
         });
-        if ($success == true){
-            $('.modal').modal();
-        }
+        // if ($success == true){
+        //     $('.modal').modal();
+        // }
     })
 
     $('select').formSelect();

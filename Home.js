@@ -13,7 +13,7 @@ $(document).ready(function (){
     //--front end HTML template Formating
     function tempFormat(design){
         $display.prepend(
-            '<div class="col s12 m4 l3">' +
+            '<div class="col s12 m6 l3">' +
                 '<div class="card large hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' + design.Gender + '">' +
                     '<div class="card-image waves-effect waves-block waves-light"><img class=" activator" src="' + design.image + '">'+
                     '</div>' +
@@ -88,12 +88,13 @@ $(document).ready(function (){
     //     );
     // }
     function carousel(carousels){
-        $carousel.append(
+        $carousel.prepend(
             '<a class="carousel-item" href="#' + carousels.id + '!"> <img class="" src="' + carousels.image + '"></a>'
         )
     }
 
-    let $slideNum = 9
+    let $slideNum = 10;
+    //let connected ;
     $.ajax({
         type: 'GET',
         url: DESIGN_URI,
@@ -116,8 +117,19 @@ $(document).ready(function (){
                 $('.tooltipped').tooltip();
                 $('.materialboxed').materialbox();
             });
+            //connected = true;
+            M.toast({
+                html: 'Welcome!😎'
+            })
+        },
+        error: function () {
+          // connected = false;
+            M.toast({
+                html: 'Unable to connect to Database ❗'
+            });
         }
-    })
+    });
+   // connected ? M.toast({html: 'Welcome!😎'}) : M.toast({html: 'Unable to connect to Database ❗'});
     
 
     //----search command event function----

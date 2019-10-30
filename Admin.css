@@ -6,25 +6,13 @@
     margin: 5px;
 }
 
-.edit{
+ul li .edit { 
     display: none;
-}
-/* div .edit {
-    display: none;
-} */
-/*
-div.edit .edit{
+} 
+
+ul li.edit .edit{
     display: initial;
 }
-div.edit .noedit {
+ul li.edit .noedit {
     display: none;
-} */
-
-
-#image3{
-    color: teal;
-}
-
-.design-list{
-    overflow-y: auto;
 }

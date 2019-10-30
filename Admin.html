@@ -7,6 +7,7 @@
     <title>Fashionister Admin</title>
     <link rel="stylesheet" href="materialize-v1.0.0/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="Admin.css">
+    <link href="iconfont/material-icons.css" rel="stylesheet">
 </head>
 <body>
     <div class="navbar-fixed">
@@ -14,6 +15,14 @@
                 <div class="nav-wrapper container">
                     <a title="Home" id="logo-container" href="Home.html" class="brand-logo"><span class="teal-text">The
                         </span><span>Fashionister</span></a>
+
+                        <!--SEARCH-->
+                        <div class="input-field right hide-on-med-and-down">
+                            <input class="search tooltipped" id="search" type="search" data-tooltip="Search Designs">
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+
                     <ul class="right hide-on-med-and-down">
                         <li><a href="LogIn.html">Log Out</a></li>
                         <li><a href="SignUp.html">Create User</a></li>
@@ -23,19 +32,9 @@
             </nav>
     </div>
 
+    <!--main content-->
     <div class="container">
         <div class="row">
-
-            <!--Show already registered designs-->
-            <section class="card-panel col s12 m7 l7 design-list">
-                <h4 class="teal-text header center">Designs</h4>
-                <div class="dispaly-designs">
-                    <template>
-                        rgfbfbvbwrbfgbrsgb
-                    </template>
-                </div>
-            </section>
-
             <!-- <div class="col l1 m1"></div> -->
 
             <!--Grabs all typed-in data-->
@@ -117,7 +116,7 @@
 
                     <!--MODAL-->
                     <!-- <a href="#more1" id="more" class="btn teal modal-trigger">More Details</a>-->
-                    <div class="modal" id="add1">
+                    <!-- <div class="modal" id="add1">
                         <div class="modal-content">
                             <h4>Success!</h4>
                             <p>Design has been added successfully!</p>
@@ -125,9 +124,9 @@
                         <div class="modal-footer">
                             <a href="#!" class="btn modal-close teal">Close</a>
                         </div>
-                    </div>
+                    </div> -->
                     <!--Update Modal-->
-                    <div class="modal" id="update1">
+                    <!-- <div class="modal" id="update1">
                         <div class="modal-content">
                             <h4>Success!</h4>
                             <p>Design has been updated successfully!</p>
@@ -135,14 +134,27 @@
                         <div class="modal-footer">
                             <a href="#!" class="btn modal-close teal">Close</a>
                         </div>
-                    </div>
+                    </div> --> 
 
                 
             </section>
+
+            <!--Show already registered designs-->
+            <section class="card-panel col s12 m7 l7 design-list">
+                
+                    <h4 class="teal-text header center">Designs</h4>
+                    <div class="dispaly-designs">
+                        <template>
+                            rgfbfbvbwrbfgbrsgb
+                        </template>
+                    </div>
+                
+            </section>
+
         </div>
     </div>
 
-
+    <!--footer content-->
     <footer class="page-footer">
         <div class="container">
             <div class="row">

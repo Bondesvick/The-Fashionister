@@ -13,7 +13,7 @@ $(document).ready(function (){
     //--front end HTML template Formating
     function tempFormat(design){
         $display.prepend(
-            '<div class="col s12 m6 l3">' +
+            '<div class="col s12 m6 l4 xl3">' +
                 '<div class="card large hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' + design.Gender + '">' +
                     '<div class="card-image waves-effect waves-block waves-light"><img class=" activator" src="' + design.image + '">'+
                     '</div>' +
@@ -134,6 +134,7 @@ $(document).ready(function (){
 
     //----search command event function----
     $('#search').keyup(function(){
+        //clear the page first
         $display.html('');
         var searchField = $(this).val()
         //console.log(searchField);

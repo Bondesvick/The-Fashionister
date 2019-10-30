@@ -17,6 +17,12 @@
       "UserName": "user1",
       "PassWord": "12345",
       "id": 3
+    },
+    {
+      "email": "bondesvick@gmail.com",
+      "UserName": "user3",
+      "PassWord": "1234567890",
+      "id": 4
     }
   ],
   "Designs": [
@@ -352,6 +358,15 @@
       "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
       "image": "Images/1415779432815560742.jpg",
       "id": 86
+    },
+    {
+      "designName": "Cagilary old man",
+      "category": "Sneaker",
+      "Gender": "For Pets",
+      "Designer": "Akah Ebube",
+      "Description": "popularly worn by young to mid age girls and women. This type of skirt suits well for a toned body figure. The skirt has a body fitting stitch which is the important",
+      "image": "Images/cute-dog-wallpapers.jpg",
+      "id": 87
     }
   ]
 }

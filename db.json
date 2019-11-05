@@ -266,15 +266,6 @@
       "Gender": "For Women",
       "Designer": "Mason Jonas",
       "Description": "popularly worn by young to mid age girls and women. This type of skirt suits well for a toned body figure. The skirt has a body fitting stitch which is the important",
-      "image": "Images/vince-camuto-ebelin-suede-cone-heel-shootie-d-20190916130833683_657803_405.jpg",
-      "id": 75
-    },
-    {
-      "designName": "bounty Heels",
-      "category": "Heels",
-      "Gender": "For Women",
-      "Designer": "Mason Jonas",
-      "Description": "popularly worn by young to mid age girls and women. This type of skirt suits well for a toned body figure. The skirt has a body fitting stitch which is the important",
       "image": "Images/images (1).jpg",
       "id": 76
     },
@@ -367,6 +358,33 @@
       "Description": "popularly worn by young to mid age girls and women. This type of skirt suits well for a toned body figure. The skirt has a body fitting stitch which is the important",
       "image": "Images/cute-dog-wallpapers.jpg",
       "id": 87
+    },
+    {
+      "designName": "Cool jumpers",
+      "category": "T-shirt",
+      "Gender": "Unisex",
+      "Designer": "Johan Constance",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/tisort_ruighinn_8729_626_626.jpg",
+      "id": 88
+    },
+    {
+      "designName": "Cool jumpers",
+      "category": "Heels",
+      "Gender": "For Women",
+      "Designer": "Johan Constance",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/x6typXvTQ6mxbSv32Rit_High_Heels_He_Loves_Me_side.png",
+      "id": 89
+    },
+    {
+      "designName": "Ebube Special",
+      "category": "Glasses",
+      "Gender": "For Men",
+      "Designer": "Johan Constance",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/images (6).jpg",
+      "id": 90
     }
   ]
 }

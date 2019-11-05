@@ -2,7 +2,7 @@
 
 ## A Fashion Design Style Management Sytem
 
-### Install JSON sever as follows:
+### Install **JSON sever** as follows:
 npm instal json-sever
     OR
 npm instal -g json-sever

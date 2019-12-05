@@ -13,7 +13,7 @@ $(document).ready(function (){
     //--front end HTML template Formating
     function tempFormat(design){
         $display.prepend(
-            '<div class="col s12 m6 l4 xl3">' +
+            '<div class="col s12 m4 l4 xl4">' +
                 '<div class="card large hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' + design.Gender + '">' +
                     '<div class="card-image waves-effect waves-block waves-light"><img class=" activator" src="' + design.image + '">'+
                     '</div>' +
@@ -153,6 +153,29 @@ $(document).ready(function (){
                 });
             }
         });
+    });
+
+    //------Category selection
+    $('.toSelect').click(function(){
+        //console.log($(this).attr('data-id'));
+
+        let currentId = $(this).attr('data-id');
+
+        //clear the page first
+        $display.html('');
+
+         $.ajax({
+             type: 'GET',
+             url: DESIGN_URI,
+             success: function (designs) {
+                 $.each(designs, function (i, design) {
+                     $('.materialboxed').materialbox();
+                     if (design.category == currentId ) {
+                         tempFormat(design);
+                     }
+                 });
+             }
+         });
     });
 
      $display.delegate('#more','click', function(e){

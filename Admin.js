@@ -104,7 +104,8 @@ $(document).ready(function (){
             Gender: $designGender.val(),
             Designer: $designer.val(),
             Description: $designDescription.val(),
-            image: 'Images/' + $imh1Btn.val()  //.substring(12, $imh1Btn.val().length)
+            image: 'Images/' + $imh1Btn.val(),  //.substring(12, $imh1Btn.val().length)
+            trendCount: 0
         };
          //console.log($imh1Btn.val());
         // console.log($designCategories.val());

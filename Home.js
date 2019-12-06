@@ -13,7 +13,7 @@ $(document).ready(function (){
     //--front end HTML template Formating
     function tempFormat(design){
         $display.prepend(
-            '<div class="col s12 m4 l4 xl4">' +
+            '<div class="col s12 m6 l4 xl4">' +
                 '<div class="card large hoverable tooltipped" data-tooltip="' + design.designName + ' ' + design.category + ' ' + design.Gender + '">' +
                     '<div class="card-image waves-effect waves-block waves-light"><img class=" activator" src="' + design.image + '">'+
                     '</div>' +
@@ -23,7 +23,7 @@ $(document).ready(function (){
                         '</div>' +
                         
                     '<div class="card-action">' +
-                        '<a href="#modal'+ design.id+'" id="more" class="btn waves-effect waves-light teal modal-trigger">More Details</a>' +
+                        '<a href="#modal' + design.id + '" id="more" data-id = "' + design.id + '" class="btn waves-effect waves-light teal modal-trigger">More Details</a>' +
                         //MODAL
                         '<div class="modal" id="modal' + design.id + '">' +
                         '<div class="col l3 m12 s12">'+
@@ -71,7 +71,7 @@ $(document).ready(function (){
                         '<p>' + design.Description.substring(0, 150) + "..." + '</p>' +
                         '<div class="card-action">' +
                         '<a class="card-title" href="#!">Close</a>' +
-                        '<a href="#modal' + design.id + '" id="more" class="teal-text modal-trigger">More Details</a>' +
+                        '<a href="#modal' + design.id + '" id="more" class="teal-text modal-trigger" data-id = "' + design.id + '">More Details</a>' +
                         '</div>'+
                     '</div>' +
                 '</div>' +
@@ -89,11 +89,31 @@ $(document).ready(function (){
     // }
     function carousel(carousels){
         $carousel.prepend(
-            '<a class="carousel-item" href="#' + carousels.id + '!"> <img class="" src="' + carousels.image + '"></a>'
+            '<a class="carousel-item tooltipped" href="#' + carousels.id + '!" data-tooltip="' + carousels.designName + ' ' + carousels.category + ' ' + carousels.Gender + '"> <img class="" src="' + carousels.image + '"></a>'
         )
     }
 
-    let $slideNum = 10;
+    function carouselTrending(){
+        let trendCount = 0;
+        let trendArray = [];
+        let trendHot = [];
+
+        $.ajax({
+            type: 'GET',
+            url: DESIGN_URI,
+            success: function(designs){
+                $.each(designs, function(i, design){
+                    trendArray.push(design.trendCount);
+                })
+            },
+            error: function(){
+
+            }
+            
+        })
+    }
+
+    let $slideNum = 12;
     //let connected ;
     $.ajax({
         type: 'GET',
@@ -145,6 +165,7 @@ $(document).ready(function (){
             success: function (designs) {
                 $.each(designs, function (i, design) {
                     $('.materialboxed').materialbox();
+                    $('.tooltipped').tooltip();
                     if (design.designName.search(expression) != -1 ||
                      design.category.search(expression) != -1 || 
                      design.Gender.search(expression) != -1) {
@@ -169,25 +190,42 @@ $(document).ready(function (){
              url: DESIGN_URI,
              success: function (designs) {
                  $.each(designs, function (i, design) {
-                     $('.materialboxed').materialbox();
+                     
                      if (design.category == currentId ) {
                          tempFormat(design);
+                         $('.tooltipped').tooltip();
+                         $('.materialboxed').materialbox();
                      }
                  });
              }
          });
     });
 
+    //More Details Button event functions
      $display.delegate('#more','click', function(e){
-         //e.preventDefault();
-      //var $dsgnDisplay = $(this).closest('div');
-      //console.log($dsgnDisplay.find('div.modal')[0]);
-      //$dsgnDisplay.find('div.modal').modal();
-     // $(this).modal();
-     $('.modal').modal();
+        
+        $('.modal').modal();
+        let dataId = $(this).attr('data-id');
+        console.log(dataId);
+
+        function updateTrend(trend){
+            let newTrend ={
+
+            }
+
+            $.ajax({
+                type: 'PUT',
+                url: DESIGN_URI + dataId,
+                data : newTrend,
+                success: function () {
+
+                }
+            })
+        }
+        
+
     });
 
-    //$('.modal').modal();
     $('.sidenav').sidenav();
     $('.tooltipped').tooltip();
     $('.fixed-action-btn').floatingActionButton({

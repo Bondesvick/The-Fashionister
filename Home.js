@@ -104,7 +104,9 @@ $(document).ready(function (){
             success: function(designs){
                 $.each(designs, function(i, design){
                     trendArray.push(design.trendCount);
-                })
+                });
+                console.log(trendArray);
+                
             },
             error: function(){
 
@@ -112,6 +114,7 @@ $(document).ready(function (){
             
         })
     }
+    carouselTrending();
 
     let $slideNum = 12;
     //let connected ;
@@ -201,12 +204,66 @@ $(document).ready(function (){
          });
     });
 
+    //------ Side Category selection ---------
+    $('.toSelectSide').click(function () {
+        //console.log($(this).attr('data-id'));
+
+        let currentId = $(this).attr('data-id');
+
+        //clear the page first
+        $display.html('');
+
+        $.ajax({
+            type: 'GET',
+            url: DESIGN_URI,
+            success: function (designs) {
+                $.each(designs, function (i, design) {
+
+                    if (design.category == currentId) {
+                        tempFormat(design);
+                        $('.tooltipped').tooltip();
+                        $('.materialboxed').materialbox();
+                    }
+                });
+            }
+        });
+    });
+
     //More Details Button event functions
-     $display.delegate('#more','click', function(e){
+     $display.delegate('#more','click', function(){
         
         $('.modal').modal();
         let dataId = $(this).attr('data-id');
-        console.log(dataId);
+        let currentRank = 0;
+        let newTrend = {};
+        //console.log(dataId);
+
+         $.ajax({
+             type: 'GET',
+             url: DESIGN_URI,
+             success: function (designs) {
+                 $.each(designs, function (i, design) {
+                     if(design.id == dataId){
+                        currentRank = design.trendCount;
+                        console.log(currentRank);
+                        newTrend.trendCount = currentRank + 1;
+                        console.log(newTrend.trendCount);
+                        
+                        return;
+                     }
+                 });
+
+                  console.log(newTrend);
+                 $.ajax({
+                     type: 'PUT',
+                     url: DESIGN_URI + dataId,
+                     data: newTrend,
+                     success: function () {
+
+                     }
+                 });
+             }
+         });
 
         function updateTrend(trend){
             let newTrend ={
@@ -214,13 +271,24 @@ $(document).ready(function (){
             }
 
             $.ajax({
-                type: 'PUT',
-                url: DESIGN_URI + dataId,
-                data : newTrend,
-                success: function () {
-
+                type: 'GET',
+                url: DESIGN_URI,
+                success: function (designs) {
+                    $.each(designs, function(i, design){
+                        console.log(design.trendCount);
+                    });
+                    
                 }
-            })
+            });
+
+            // $.ajax({
+            //     type: 'PUT',
+            //     url: DESIGN_URI + dataId,
+            //     data : newTrend,
+            //     success: function () {
+
+            //     }
+            // });
         }
         
 

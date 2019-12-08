@@ -23,6 +23,18 @@
       "UserName": "user3",
       "PassWord": "1234567890",
       "id": 4
+    },
+    {
+      "email": "bondesvick@gmail.com",
+      "UserName": "dfvc",
+      "PassWord": "wefdv",
+      "id": 5
+    },
+    {
+      "email": "bondesvick@gmail.com",
+      "UserName": "user1",
+      "PassWord": "jhjbk",
+      "id": 6
     }
   ],
   "Designs": [
@@ -435,16 +447,6 @@
       "image": "Images/113339617_439.jpg",
       "trendCount": 0,
       "id": 91
-    },
-    {
-      "designName": "Cagilary old man",
-      "category": "Sneaker",
-      "Gender": "Unisex",
-      "Designer": "James Cagilary",
-      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
-      "image": "Images/Survey_Shoes_600x.jpg",
-      "trendCount": 0,
-      "id": 92
     }
   ]
 }

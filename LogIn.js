@@ -1,5 +1,6 @@
 $(document).ready(function () {
             const LOGIN_DATABASE_URI = "http://localhost:4000/Users";
+            
             $('#logIn').click(function (e) {
                 e.preventDefault();
                 const userName = $('#username').val().trim();

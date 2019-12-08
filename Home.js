@@ -227,6 +227,8 @@ $(document).ready(function (){
                 });
             }
         });
+
+        //$('.sidenav').close();
     });
 
     //More Details Button event functions

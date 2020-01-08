@@ -87,14 +87,16 @@ $(document).ready(function (){
     //         '</li>'
     //     );
     // }
+
+    // CAROUSEL HTML Format
     function carousel(carousels){
         $carousel.prepend(
-            '<a class="carousel-item tooltipped" href="#' + carousels.id + '!" data-tooltip="' + carousels.designName + ' ' + carousels.category + ' ' + carousels.Gender + '"> <img class="" src="' + carousels.image + '"></a>'
+            '<a class="carousel-item tooltipped" href="#' + carousels.id + '!" data-tooltip="' + carousels.designName + ' ' + carousels.category + ' ' + carousels.Gender + ' ' + carousels.trendCount + ' views"> <img class="" src="' + carousels.image + '"></a>'
         )
     }
 
+    // A function to load and append the Carousel
     function carouselTrending(){
-        let trendCount = 0;
         let trendArray = [];
         let trendHot = [];
 
@@ -102,21 +104,75 @@ $(document).ready(function (){
             type: 'GET',
             url: DESIGN_URI,
             success: function(designs){
+
+                // getting all the trendCount Values
                 $.each(designs, function(i, design){
                     trendArray.push(design.trendCount);
                 });
+
+                // sorting the trendCount values
+                trendArray.sort((a,b) => a - b);
                 console.log(trendArray);
                 
+                // pushing the designs with the most popular trendCount to a new Array
+                for(let range = 12; range > 0; range--){
+                    trendHot.push(trendArray.pop());
+                }
+                console.log(trendHot);
+                
+                
+                $.each(designs, function (i, design) {
+                    //trendArray.push(design.trendCount);
+                    //console.log(trendHot);
+                    for(let a of trendHot){
+                        //console.log(a);
+                        
+                        if(a === design.trendCount){
+                            //console.log(design);
+                            carousel(design);
+                            $('.carousel').carousel();
+                            a = null;
+                            break;
+                        }
+                    }
+                    // if(trendHot.any((a) => !(a < design))){
+                    //     console.log(design);
+                        
+                    // }
+                });
+                
+                // for(let a = 0; a < designs.length; a++) {
+                //         console.log(designs[a].trendCount);
+                        
+                //         for(let i = 0; i < trendHot.length; i++){
+                //             console.log(trendHot[i]);
+                            
+                //             if (trendHot[i] === designs[a].trendCount) {
+                //                 carousel(design);
+                                
+                //     //         console.log(trendHot[i]);
+
+                //                 trendHot[i] = null;
+                //                 break;
+                //             }
+                //         } 
+                //     //$('.carousel').carousel();
+                // };
+                 
             },
             error: function(){
-
+                M.toast({
+                    html: 'An error occured while trying to load the carousel ❗'
+                });
             }
             
-        })
+        });
     }
     carouselTrending();
+    
+    
 
-    let $slideNum = 12;
+    //let $slideNum = 12;
     //let connected ;
     $.ajax({
         type: 'GET',
@@ -126,12 +182,12 @@ $(document).ready(function (){
             $.each(designs, function (i, design) {
                 //console.log(design.image);
                 tempFormat(design);
-                if($slideNum > 0){
-                     //slides(design);
-                     carousel(design);
-                      $slideNum--;
-                }
-                $('.carousel').carousel();
+                // if($slideNum > 0){
+                //      //slides(design);
+                     // carousel(design);
+                //       $slideNum--;
+                // }
+                 //$('.carousel').carousel();
                 //  $('.carousel.carousel-slider').carousel({
                 //      fullWidth: false,
                 //      indicators: true
@@ -246,11 +302,18 @@ $(document).ready(function (){
              success: function (designs) {
                  $.each(designs, function (i, design) {
                      if(design.id == dataId){
-                        currentRank = design.trendCount;
+                        currentRank = parseInt(design.trendCount);
                         console.log(currentRank);
+
                         newTrend.trendCount = currentRank + 1;
+                        newTrend.designName = design.designName,
+                        newTrend.category = design.category,
+                        newTrend.Gender = design.Gender,
+                        newTrend.Designer = design.Designer,
+                        newTrend.Description = design.Description,
+                        newTrend.image = design.image,
+
                         console.log(newTrend.trendCount);
-                        
                         return;
                      }
                  });
@@ -258,7 +321,7 @@ $(document).ready(function (){
                   console.log(newTrend);
                  $.ajax({
                      type: 'PUT',
-                     url: DESIGN_URI + dataId,
+                     url: DESIGN_URI + '/' + dataId,
                      data: newTrend,
                      success: function () {
 
@@ -267,33 +330,13 @@ $(document).ready(function (){
              }
          });
 
-        function updateTrend(trend){
-            let newTrend ={
+    });
 
-            }
-
-            $.ajax({
-                type: 'GET',
-                url: DESIGN_URI,
-                success: function (designs) {
-                    $.each(designs, function(i, design){
-                        console.log(design.trendCount);
-                    });
-                    
-                }
-            });
-
-            // $.ajax({
-            //     type: 'PUT',
-            //     url: DESIGN_URI + dataId,
-            //     data : newTrend,
-            //     success: function () {
-
-            //     }
-            // });
-        }
-        
-
+    
+    //Adding Scroll events to the document
+    $(document).scroll(function () {
+        $('#navDiv').addClass('navbar');
+        $('#navDiv').removeClass('navbar-fixed');
     });
 
     $('.sidenav').sidenav();

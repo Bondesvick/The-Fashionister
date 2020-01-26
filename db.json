@@ -119,7 +119,7 @@
       "id": 51
     },
     {
-      "trendCount": "1",
+      "trendCount": "2",
       "designName": " Mermaid",
       "category": "Shirt",
       "Gender": "For Pets",
@@ -219,7 +219,7 @@
       "id": 66
     },
     {
-      "trendCount": "3",
+      "trendCount": "4",
       "designName": "Cagilary old man",
       "category": "Shoe",
       "Gender": "For Women",
@@ -309,7 +309,7 @@
       "id": 76
     },
     {
-      "trendCount": "1",
+      "trendCount": "3",
       "designName": "German Tuxedo",
       "category": "Suit",
       "Gender": "For Men",
@@ -409,17 +409,17 @@
       "id": 91
     },
     {
+      "trendCount": "1",
       "designName": "Konk Googles",
       "category": "Glasses",
       "Gender": "Unisex",
       "Designer": "John Konk",
       "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
       "image": "Images/10186027_r.webp",
-      "trendCount": "0",
       "id": 92
     },
     {
-      "trendCount": "1",
+      "trendCount": "2",
       "designName": "Konk Googles",
       "category": "Glasses",
       "Gender": "Unisex",
@@ -447,6 +447,26 @@
       "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
       "image": "Images/Plus-Size-Blouse-Skirt---Black-Red-7604916.webp",
       "id": 95
+    },
+    {
+      "trendCount": "4",
+      "designName": "Daniel",
+      "category": "Shirt",
+      "Gender": "For Men",
+      "Designer": "IK",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/113339617_439.jpg",
+      "id": 96
+    },
+    {
+      "trendCount": "NaN",
+      "designName": "Cool Googles",
+      "category": "Glasses",
+      "Gender": "Unisex",
+      "Designer": "Akah Ebube",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/irlglasses.jpg",
+      "id": 97
     }
   ]
 }

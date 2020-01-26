@@ -16,6 +16,7 @@ body {
     margin-right: auto;
     align-content: center;
     max-width: 500px;
+    opacity: 90%;
 }
 
 .logIn-btn {

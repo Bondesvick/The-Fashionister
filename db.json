@@ -49,7 +49,7 @@
       "id": 44
     },
     {
-      "trendCount": "1",
+      "trendCount": "2",
       "designName": " Mermaid",
       "category": "Sneaker",
       "Gender": "For Men",
@@ -89,7 +89,7 @@
       "id": 48
     },
     {
-      "trendCount": "2",
+      "trendCount": "3",
       "designName": " Mermaid",
       "category": "Heels",
       "Gender": "For Women",
@@ -129,7 +129,7 @@
       "id": 52
     },
     {
-      "trendCount": "1",
+      "trendCount": "3",
       "designName": " Mermaid",
       "category": "Shoe",
       "Gender": "For Men",
@@ -219,7 +219,7 @@
       "id": 66
     },
     {
-      "trendCount": "4",
+      "trendCount": "6",
       "designName": "Cagilary old man",
       "category": "Shoe",
       "Gender": "For Women",
@@ -229,7 +229,7 @@
       "id": 67
     },
     {
-      "trendCount": "1",
+      "trendCount": "3",
       "designName": "Cagilary old man",
       "category": "Shoe",
       "Gender": "For Women",
@@ -249,7 +249,7 @@
       "id": 69
     },
     {
-      "trendCount": "1",
+      "trendCount": "2",
       "designName": "Ebube Dog",
       "category": "T-shirt",
       "Gender": "For Pets",
@@ -289,7 +289,7 @@
       "id": 73
     },
     {
-      "trendCount": "3",
+      "trendCount": "4",
       "designName": "bounty Sneaker",
       "category": "Sneaker",
       "Gender": "Unisex",
@@ -329,7 +329,7 @@
       "id": 79
     },
     {
-      "trendCount": "1",
+      "trendCount": "3",
       "designName": "Mini Pant",
       "category": "Trouser",
       "Gender": "For Pets",
@@ -359,7 +359,7 @@
       "id": 82
     },
     {
-      "trendCount": "2",
+      "trendCount": "3",
       "designName": "Cagilary new man",
       "category": "Suit",
       "Gender": "For Men",
@@ -369,7 +369,7 @@
       "id": 84
     },
     {
-      "trendCount": "5",
+      "trendCount": "6",
       "designName": "Cagilary new man",
       "category": "Sneaker",
       "Gender": "Unisex",
@@ -379,7 +379,7 @@
       "id": 86
     },
     {
-      "trendCount": "7",
+      "trendCount": "10",
       "designName": "Cool jumpers",
       "category": "T-shirt",
       "Gender": "Unisex",
@@ -397,16 +397,6 @@
       "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
       "image": "Images/images (6).jpg",
       "id": 90
-    },
-    {
-      "trendCount": "3",
-      "designName": "Konk Googles",
-      "category": "Glasses",
-      "Gender": "Unisex",
-      "Designer": "John Konk",
-      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
-      "image": "Images/Low-Price-Glasses-xs.webp",
-      "id": 91
     },
     {
       "trendCount": "1",
@@ -435,21 +425,11 @@
       "Gender": "Unisex",
       "Designer": "John Konk",
       "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
-      "image": "Images/pl5845_3.webp",
-      "id": 94
-    },
-    {
-      "trendCount": "1",
-      "designName": "Konk Googles",
-      "category": "Glasses",
-      "Gender": "Unisex",
-      "Designer": "John Konk",
-      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
       "image": "Images/Plus-Size-Blouse-Skirt---Black-Red-7604916.webp",
       "id": 95
     },
     {
-      "trendCount": "4",
+      "trendCount": "5",
       "designName": "Daniel",
       "category": "Shirt",
       "Gender": "For Men",

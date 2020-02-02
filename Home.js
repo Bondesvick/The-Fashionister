@@ -334,10 +334,10 @@ $(document).ready(function (){
 
     
     //Adding Scroll events to the document
-    $(document).scroll(function () {
-        $('#navDiv').addClass('navbar');
-        $('#navDiv').removeClass('navbar-fixed');
-    });
+    // $(document).scroll(function () {
+    //     $('#navDiv').addClass('navbar');
+    //     $('#navDiv').removeClass('navbar-fixed');
+    // });
 
     $('.sidenav').sidenav();
     $('.tooltipped').tooltip();

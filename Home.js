@@ -19,7 +19,7 @@ $(document).ready(function (){
                     '</div>' +
                         '<div class="card-content">' +
                         '<span class="center teal-text text-darken-4 card-title activator">' + design.designName + '</span>' +
-                        '<p class="truncate">' + design.Description + '</p>' +
+                        '<p class="">' + design.Description + '</p>' +
                         '</div>' +
                         
                     '<div class="card-action">' +
@@ -68,7 +68,7 @@ $(document).ready(function (){
                         '</br>' +
                         'By: ' + design.Designer +
                         '</blockquote>' +
-                        '<p>' + design.Description.substring(0, 150) + "..." + '</p>' +
+                        '<p>' + design.Description + "..." + '</p>' +
                         '<div class="card-action">' +
                         '<a class="card-title" href="#!">Close</a>' +
                         '<a href="#modal' + design.id + '" id="more" class="teal-text modal-trigger" data-id = "' + design.id + '">More Details</a>' +

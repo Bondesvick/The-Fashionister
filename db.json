@@ -119,7 +119,7 @@
       "id": 51
     },
     {
-      "trendCount": "2",
+      "trendCount": "3",
       "designName": " Mermaid",
       "category": "Shirt",
       "Gender": "For Pets",
@@ -127,16 +127,6 @@
       "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
       "image": "Images/elk-navy-blue-bandana-for-small-medium-dog.jpg",
       "id": 52
-    },
-    {
-      "trendCount": "4",
-      "designName": " Mermaid",
-      "category": "Shoe",
-      "Gender": "For Men",
-      "Designer": "Mason Jonas",
-      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop top or a sleeveless body-hugging top.",
-      "image": "Images/04600840_zi_black_black.jpg",
-      "id": 53
     },
     {
       "trendCount": "1",
@@ -159,7 +149,7 @@
       "id": 55
     },
     {
-      "trendCount": "2",
+      "trendCount": "3",
       "designName": "Ebube Gown",
       "category": "Gown",
       "Gender": "For Women",
@@ -219,7 +209,7 @@
       "id": 66
     },
     {
-      "trendCount": "6",
+      "trendCount": "8",
       "designName": "Cagilary old man",
       "category": "Shoe",
       "Gender": "For Women",
@@ -359,7 +349,7 @@
       "id": 82
     },
     {
-      "trendCount": "5",
+      "trendCount": "7",
       "designName": "Cagilary new man",
       "category": "Suit",
       "Gender": "For Men",
@@ -429,7 +419,7 @@
       "id": 95
     },
     {
-      "trendCount": "5",
+      "trendCount": "6",
       "designName": "Daniel",
       "category": "Shirt",
       "Gender": "For Men",
@@ -457,6 +447,16 @@
       "image": "Images/download (3).jpg",
       "trendCount": "0",
       "id": 98
+    },
+    {
+      "trendCount": "2",
+      "designName": "Ebube Dog",
+      "category": "Suit",
+      "Gender": "For Men",
+      "Designer": "Akah Ebube",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop\nT",
+      "image": "Images/1.jpg",
+      "id": 99
     }
   ]
 }

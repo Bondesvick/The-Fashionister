@@ -449,7 +449,7 @@
       "id": 98
     },
     {
-      "trendCount": "2",
+      "trendCount": "3",
       "designName": "Ebube Dog",
       "category": "Suit",
       "Gender": "For Men",
@@ -457,6 +457,16 @@
       "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop\nT",
       "image": "Images/1.jpg",
       "id": 99
+    },
+    {
+      "trendCount": "1",
+      "designName": "Rakuteen",
+      "category": "Heels",
+      "Gender": "For Women",
+      "Designer": "",
+      "Description": "The material used in designing the skirt is chiffon, georgette or any high-quality material. The mermaid skirt goes well for well-toned body figure. The mermaid skirt goes well with a tight fit crop",
+      "image": "Images/images (4).jpg",
+      "id": 100
     }
   ]
 }
